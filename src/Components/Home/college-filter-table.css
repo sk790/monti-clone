@@ -1,0 +1,250 @@
+/* College Rankings Container */
+body{
+
+  background-image: url(../../assets/bgc.png);
+}
+.college-rankings-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  
+  .college-rankings-heading {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Filter Styles */
+  .filter-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid  #004d40 ;
+    padding-bottom: 1rem;
+  }
+  
+  .filter-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .filter-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .filter-pill {
+    white-space: nowrap;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    border: 1px solid #004d40;
+    background-color: white;
+    color: black;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-pill:hover {
+    background-color: var(--light-bg);
+  }
+  
+  .filter-pill.active {
+    background-color: var(--dark-green);
+    color: var(--white);
+    border-color: var(--dark-green);
+  }
+  
+  .scroll-indicator {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(189, 2, 2, 0.1);
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  /* Table Styles */
+  .table-container {
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .rankings-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .rankings-table th {
+    background-color: var(--dark-green);
+    padding: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .rankings-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+  }
+  
+  .rankings-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .rankings-table tr:hover {
+    background-color: var(--highlight-bg);
+  }
+  
+  /* Cell Styles */
+  .rank-cell {
+    font-weight: 600;
+    color: var(--text-color);
+    width: 60px;
+  }
+  
+  .college-cell {
+    min-width: 300px;
+  }
+  
+  .college-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .college-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .college-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .college-name {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+  }
+  
+  .college-location {
+    font-size: 0.85rem;
+    color: var(--light-text);
+  }
+  
+  .rating {
+    color: var(--dark-orange);
+    font-weight: 600;
+  }
+  
+  .ranking-cell {
+    min-width: 180px;
+  }
+  
+  .ranking-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .ranking-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  
+  .ranking-position {
+    font-size: 0.9rem;
+  }
+  
+  .cutoff-cell {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
+  
+  .deadline-cell {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
+  
+  .fees-cell {
+    min-width: 120px;
+  }
+  
+  .fees-amount {
+    font-weight: 600;
+    color: var(--dark-green);
+  }
+  
+  .fees-detail {
+    font-size: 0.85rem;
+    color: var(--light-text);
+  }
+  
+  /* Back to top button */
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--dark-green);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: all 0.2s ease;
+  }
+  
+  .back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .back-to-top-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .college-rankings-container {
+      padding: 1rem;
+    }
+  
+    .college-rankings-heading {
+      font-size: 1.5rem;
+    }
+  
+    .filter-pill {
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
+  

@@ -1,0 +1,164 @@
+/* Variables for the requested color scheme */
+:root {
+    --dark-orange: #ff6b00;
+    --dark-green: #004d40;
+    --white: #ffffff;
+    --light-bg: #f5f7fa;
+    --border-color: #e5e7eb;
+    --text-color: #333333;
+  }
+  
+  .explore-container {
+    background-image:url("../../assets/bgc1.png") ;
+    background-size: cover;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    padding:3%  11%;
+}
+
+.explore-heading {
+    color: var(--dark-orange);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .explore-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+  }
+  
+  .explore-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    color: var(--dark-green);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .card-description {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-image {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tag {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+  }
+  
+  .card-link {
+    color: var(--dark-orange);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .card-link:hover {
+    text-decoration: underline;
+  }
+  
+  .link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sub-link {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .sub-link:hover {
+    text-decoration: underline;
+  }
+  
+  .college-compare {
+    margin-bottom: 1.5rem;
+  }
+  
+  .college-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .college-icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .college-name {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .college-tag {
+    background-color: var(--light-bg);
+    color: var(--dark-orange);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+  }
+  
+  .vs {
+    margin: 0 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 0.8rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .explore-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .card-image {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  

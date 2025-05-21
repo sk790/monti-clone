@@ -1,0 +1,97 @@
+// api structure fro regestration page and college details page
+colleges{
+            id
+            name
+            location{
+                city
+                state
+            }
+            mainCourse{
+                list of main courses
+            }
+            courses{
+                id
+                name
+                duration(in years)
+                aplicationDeadline{
+                    startDate
+                    endDate
+                    afterdate aplication charges
+                }
+                program type{
+                ug
+                pg
+                diploma
+                }
+                placement{
+                    avg package
+                    highest package
+                    placement percentage
+                    top recruiters company
+                }
+                fees{
+                    total
+                    scholarship
+                    first year
+                    second year
+                }
+
+            } 
+            colleges type{
+                private
+                government
+                deemed
+            }
+            college rating{
+                rating
+                review
+            }
+            entrance exam{
+                name
+                type
+                cutoff
+                rank{
+                    min
+                    max
+                }
+                fee dectction %
+            }
+            hostel{
+                awalible=y/n
+                type{
+                    single
+                    double
+                }
+                hostel fee{
+                    first year
+                 second year
+                }
+                mess{
+                    food type{
+                        veg
+                        non-veg
+                        both(defoult)
+                    }
+                }
+            }
+            gander acceptance{
+                for girls
+                for boys
+                both(defoult)
+            }
+            college avg placement{
+                avg package
+                highest package
+                avg placement percentage
+            }
+            colleges images{
+                image(1 to 5)
+                video
+                
+            }
+            social media visibility{  //create latter
+                facebook
+                instagram
+                twitter
+                linkedin
+            }
