@@ -6,6 +6,10 @@ colleges{
                 city
                 state
             }
+            stream{
+                online
+                offline
+            }
             mainCourse{
                 list of main courses
             }
@@ -95,3 +99,4 @@ colleges{
                 twitter
                 linkedin
             }
+        }
